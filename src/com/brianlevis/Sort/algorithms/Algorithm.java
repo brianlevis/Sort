@@ -1,10 +1,10 @@
-package sort.algorithms;
+package com.brianlevis.src.sort.algorithms;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import sort.graphics.tile.Element;
-import sort.graphics.tile.Tile;
+import com.brianlevis.src.sort.graphics.tile.Element;
+import com.brianlevis.src.sort.graphics.tile.Tile;
 
 public class Algorithm {
 
@@ -43,11 +43,13 @@ public class Algorithm {
 
 	}
 
-	public void lookAt(int index) {
+	public int get(int index) {
 		element.setColor(COLOR_WHITE);
 		element = elements.get(index);
-		element.setColor(COLOR_GREEN);
+		element.setColor(COLOR_RED);
 	}
+	
+	
 
 	public void moveLeft(int index) {
 		element.setColor(COLOR_RED);

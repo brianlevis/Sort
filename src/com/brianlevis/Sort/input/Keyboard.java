@@ -1,4 +1,4 @@
-package sort.input;
+package com.brianlevis.src.sort.input;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

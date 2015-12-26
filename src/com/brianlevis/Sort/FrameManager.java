@@ -1,15 +1,15 @@
-package sort;
+package com.brianlevis.src.sort;
 
 import java.util.Random;
 
-import sort.graphics.Colors;
-import sort.graphics.Screen;
-import sort.graphics.tile.Location;
-import sort.graphics.tile.NumberTile;
-import sort.graphics.tile.ScoreTile;
-import sort.graphics.tile.Tile;
-import sort.graphics.tile.VoidTile;
-import sort.input.Keyboard;
+import com.brianlevis.src.sort.graphics.Colors;
+import com.brianlevis.src.sort.graphics.Screen;
+import com.brianlevis.src.sort.graphics.tile.Location;
+import com.brianlevis.src.sort.graphics.tile.NumberTile;
+import com.brianlevis.src.sort.graphics.tile.ScoreTile;
+import com.brianlevis.src.sort.graphics.tile.Tile;
+import com.brianlevis.src.sort.graphics.tile.VoidTile;
+import com.brianlevis.src.sort.input.Keyboard;
 
 public class FrameManager {
 

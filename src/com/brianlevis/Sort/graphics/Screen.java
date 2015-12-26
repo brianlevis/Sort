@@ -1,8 +1,8 @@
-package sort.graphics;
+package com.brianlevis.src.sort.graphics;
 
-import sort.Frame;
-import sort.graphics.tile.Element;
-import sort.graphics.tile.Tile;
+import com.brianlevis.src.sort.Frame;
+import com.brianlevis.src.sort.graphics.tile.Element;
+import com.brianlevis.src.sort.graphics.tile.Tile;
 
 public class Screen {
 

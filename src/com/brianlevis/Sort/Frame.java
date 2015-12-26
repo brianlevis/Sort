@@ -1,4 +1,4 @@
-package sort;
+package com.brianlevis.src.sort;
 
 import java.awt.Canvas;
 import java.awt.Dimension;
@@ -10,10 +10,10 @@ import java.awt.image.DataBufferInt;
 
 import javax.swing.JFrame;
 
-import sort.graphics.Screen;
-import sort.graphics.tile.Tile;
-import sort.input.Keyboard;
-import sort.input.Mouse;
+import com.brianlevis.src.sort.graphics.Screen;
+import com.brianlevis.src.sort.graphics.tile.Tile;
+import com.brianlevis.src.sort.input.Keyboard;
+import com.brianlevis.src.sort.input.Mouse;
 
 public class Frame extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;

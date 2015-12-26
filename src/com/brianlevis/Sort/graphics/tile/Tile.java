@@ -1,11 +1,11 @@
-package sort.graphics.tile;
+package com.brianlevis.src.sort.graphics.tile;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import sort.algorithms.Algorithm;
-import sort.algorithms.Insertion;
-import sort.graphics.Screen;
+import com.brianlevis.src.sort.algorithms.Algorithm;
+import com.brianlevis.src.sort.algorithms.Insertion;
+import com.brianlevis.src.sort.graphics.Screen;
 
 public class Tile {
 

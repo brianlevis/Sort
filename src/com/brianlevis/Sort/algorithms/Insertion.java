@@ -1,12 +1,14 @@
-package sort.algorithms;
+package com.brianlevis.src.sort.algorithms;
 
 public class Insertion extends Algorithm {
 
+	
 	public Insertion() {
 		super("Insertion Sort");
 	}
-	/*
-	public void update() {
-	}*/
+	
+	public void next() {
+		
+	}
 
 }
