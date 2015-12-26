@@ -39,6 +39,7 @@ public class Tile {
 		switch(name){
 			case "insertion":
 				algorithm = new Insertion();
+				break;
 			case "selection":
 				algorithm = new Selection();
 		}

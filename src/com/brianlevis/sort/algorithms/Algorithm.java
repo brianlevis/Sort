@@ -17,8 +17,17 @@ public class Algorithm {
 	private String title;
 	protected int iteration = 0;
 	public List<Element> elements = new ArrayList<Element>();
+
 	public Algorithm(String title) {
 		this.title = title;
+		int[] data = Tile.sample.clone();
+		for (int i = 0; i < data.length; i++) {
+			elements.add(new Element(data[i]));
+		}
+	}
+	
+	protected void move(int origin, int destination) {
+		elements.add(destination, elements.remove(origin));
 	}
 	
 	protected int get(int index) {
