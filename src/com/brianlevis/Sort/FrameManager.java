@@ -2,13 +2,10 @@ package com.brianlevis.sort;
 
 import java.util.Random;
 
-import com.brianlevis.sort.graphics.Colors;
 import com.brianlevis.sort.graphics.Screen;
 import com.brianlevis.sort.graphics.tile.Location;
 import com.brianlevis.sort.graphics.tile.NumberTile;
-import com.brianlevis.sort.graphics.tile.ScoreTile;
 import com.brianlevis.sort.graphics.tile.Tile;
-import com.brianlevis.sort.graphics.tile.VoidTile;
 import com.brianlevis.sort.input.Keyboard;
 
 public class FrameManager {

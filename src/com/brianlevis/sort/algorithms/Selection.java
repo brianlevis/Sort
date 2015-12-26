@@ -1,7 +1,5 @@
 package com.brianlevis.sort.algorithms;
 
-import com.brianlevis.sort.graphics.tile.Element;
-
 public class Selection extends Algorithm {
 
 	private int lastIndex    = 0;

@@ -1,4 +1,4 @@
-package sort.graphics.tile;
+package com.brianlevis.sort.graphics.tile;
 
 import java.util.ArrayList;
 import java.util.List;

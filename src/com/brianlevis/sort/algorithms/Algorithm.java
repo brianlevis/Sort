@@ -15,28 +15,10 @@ public class Algorithm {
 	protected boolean sorted;
 	
 	private String title;
-	private int[] data;
 	protected int iteration = 0;
-	private Element element;
 	public List<Element> elements = new ArrayList<Element>();
-	private boolean check = true;
-
 	public Algorithm(String title) {
 		this.title = title;
-		data = Tile.sample.clone();
-		for (int i = 0; i < data.length; i++) {
-			elements.add(new Element(data[i]));
-		}
-		element = elements.get(0);
-		element.setColor(COLOR_GREEN);
-	}
-
-	boolean check() {
-		for (int i = 1; i < data.length; i++) {
-			if (data[i] < data[i - 1])
-				return false;
-		}
-		return true;
 	}
 	
 	protected int get(int index) {
