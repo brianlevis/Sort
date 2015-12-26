@@ -1,3 +1,4 @@
 # Sort
 Visualization of Sorting Algorithms
-Built from copy of my 2048 game. Right now, all I have the ability to display simultaneous algorithms, but I have one broken implementation of an insertion sort.
+Like this: https://youtu.be/kPRA0W1kECg
+Built from copy of my 2048 game. Right now, I have insertion and selection sort implemented, and support for 1-9 simultaneous demonstrations.
