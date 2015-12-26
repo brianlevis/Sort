@@ -33,9 +33,9 @@ public class FrameManager {
 	public FrameManager(Keyboard keyboard) {
 		this.keyboard = keyboard;
 
-		//generateTiles(8, new String[] { "insertion", "insertion", "insertion", "insertion", "insertion", "insertion",
-		//	"insertion", "insertion" });
-		generateTiles(1, new String[] { "insertion" });
+		generateTiles(8, new String[] { "insertion", "selection", "insertion", "selection", "insertion", "insertion",
+			"selection", "insertion" });
+		//generateTiles(1, new String[] { "insertion" });
 
 	}
 

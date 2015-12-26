@@ -12,8 +12,8 @@ public class Algorithm {
 	private static int COLOR_GREEN = 0xff00ff00;
 	private static int COLOR_RED = 0xffff0000;
 
-	private int currentIndex, action = 0, sortCount = 1;
-
+	protected boolean sorted;
+	
 	private String title;
 	private int[] data;
 	protected int iteration = 0;
@@ -38,49 +38,24 @@ public class Algorithm {
 		}
 		return true;
 	}
-
-	public void moveForward(int pos) {
-
-	}
-
-	public int get(int index) {
-		element.setColor(COLOR_WHITE);
-		element = elements.get(index);
-		element.setColor(COLOR_RED);
-		return element.value;
+	
+	protected int get(int index) {
+		return elements.get(index).value;
 	}
 	
-	
-
-	public void moveLeft(int index) {
-		element.setColor(COLOR_RED);
-		elements.remove(element);
-		//element.setColor(COLOR_WHITE);
-		elements.add(index - 1, element);
+	protected int select(int index) {
+		elements.get(index).setColor(COLOR_RED);
+		return get(index);
 	}
-
-	public void update() {
-		if (check && !check()) {
-			switch (action) {
-				case 0: // Find next element
-					get(sortCount);
-					currentIndex = sortCount;
-					System.out.println("Looking at element " + currentIndex);
-					action = 1;
-					break;
-				case 1: // Move element
-					System.out.println("Comparing index " + currentIndex + " to index " + (currentIndex + 1));
-					element = elements.get(currentIndex + 1);
-					if (elements.get(currentIndex).value < element.value) {
-						moveLeft(currentIndex);
-						System.out.println("Moving element " + currentIndex + " left");
-						currentIndex--;
-					} else {
-						action = 0;
-						sortCount++;
-					}
-			}
-			iteration++;
-		}
+	
+	protected void deselect(int index) {
+		elements.get(index).setColor(COLOR_WHITE);
+	}
+	
+	protected void highlight(int index) {
+		elements.get(index).setColor(COLOR_GREEN);
+	}
+	
+	public void next(){
 	}
 }

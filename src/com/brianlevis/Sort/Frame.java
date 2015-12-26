@@ -21,7 +21,7 @@ public class Frame extends Canvas implements Runnable {
 	private static int width = 900;
 	private static int height = 600;
 	public static String title = "Sort";
-	private static double ups = 1.0;
+	private static double ups = 10.0;
 
 	private Thread thread;
 	private JFrame frame;

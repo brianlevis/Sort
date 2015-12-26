@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.brianlevis.sort.algorithms.Algorithm;
 import com.brianlevis.sort.algorithms.Insertion;
+import com.brianlevis.sort.algorithms.Selection;
 import com.brianlevis.sort.graphics.Screen;
 
 public class Tile {
@@ -38,6 +39,8 @@ public class Tile {
 		switch(name){
 			case "insertion":
 				algorithm = new Insertion();
+			case "selection":
+				algorithm = new Selection();
 		}
 
 		pixels = new int[height * width];
@@ -47,7 +50,7 @@ public class Tile {
 
 	public static void update() {
 		for (Tile tile : tiles) {
-			tile.algorithm.update();
+			tile.algorithm.next();
 		}
 	}
 
