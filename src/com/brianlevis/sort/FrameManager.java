@@ -15,17 +15,14 @@ public class FrameManager {
     public static final int xOffset = 50;
     public static final int yOffset = 220;
 
-    public static final int TILE_SIZE = 100;
-
-    public static final int TILE_GAP = 10;
     public FrameManager(Keyboard keyboard) {
 	generateTiles(8, new String[] { "insertion", "selection", "insertion", "selection", "insertion", "insertion",
 	        "selection", "insertion" });
 	// generateTiles(1, new String[] { "insertion" });
-
     }
 
     public void update() {
+	
     }
 
     private void generateTiles(int tileCount, String[] names) {

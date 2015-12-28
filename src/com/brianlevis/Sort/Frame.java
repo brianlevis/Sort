@@ -110,7 +110,7 @@ public class Frame extends Canvas implements Runnable {
     public void update() {
 	// keyboard.update();
 	Tile.update();
-	// fm.update();
+	//fm.update();
     }
 
     public void render() {

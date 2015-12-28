@@ -49,9 +49,8 @@ public class Screen {
     public void renderTile(Tile tile, int barWidth, int heightMultiplier) {
 	int control = 0;
 	for (Element element : tile.algorithm.elements) {
-	    drawBar(heightMultiplier * element.value, barWidth,
-		    tile.xPosition + control * (barWidth + 1) + 5, tile.yPosition + tile.height - 1,
-	            element.color);
+	    drawBar(heightMultiplier * element.value, barWidth, tile.xPosition + control * (barWidth + 1) + 5,
+	            tile.yPosition + tile.height - 1, element.color);
 	    control++;
 	}
     }
