@@ -2,6 +2,7 @@ package com.brianlevis.sort.algorithms;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import com.brianlevis.sort.graphics.tile.Element;
 import com.brianlevis.sort.graphics.tile.Tile;
@@ -12,18 +13,27 @@ public class Algorithm {
     private static int COLOR_GREEN = 0xff00ff00;
     private static int COLOR_RED = 0xffff0000;
 
-    protected boolean sorted;
+    public boolean sorted;
 
     private String title;
+    private Random random = new Random();
     protected int iteration = 0;
     public List<Element> elements = new ArrayList<Element>();
 
+    
     public Algorithm(String title) {
 	this.title = title;
-	int[] data = Tile.sample.clone();
+	int[] data = generateData(100, 100);
 	for (int i = 0; i < data.length; i++) {
 	    elements.add(new Element(data[i]));
 	}
+    }
+    
+    private int[] generateData(int size, int range) {
+	int[] data = new int[size];
+	for (int i = 0; i < size; i++)
+	    data[i] = random.nextInt(range + 1);
+	return data;
     }
 
     protected void move(int origin, int destination) {

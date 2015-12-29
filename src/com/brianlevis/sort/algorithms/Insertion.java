@@ -3,8 +3,7 @@ package com.brianlevis.sort.algorithms;
 public class Insertion extends Algorithm {
 
     private int sortedIndex = 0;
-    private int currentIndex = 0;
-    // private int localMinimum = 0;
+    private int currentIndex = 1;
 
     public Insertion() {
 	super("Insertion Sort");
@@ -23,16 +22,14 @@ public class Insertion extends Algorithm {
 	if (currentIndex + 1 < elements.size())
 	    deselect(currentIndex + 1);
 	deselect(sortedIndex);
+	
 	if (currentIndex == 0 || get(currentIndex) >= get(currentIndex - 1)) {
-	    // Reset procedure: forget about previous data, select new data
-	    // nextIndex++;
-	    if (sortedIndex == 0)
+	    if (sortedIndex == 0 || currentIndex - 1 == sortedIndex)
 		sortedIndex++;
 	    currentIndex = sortedIndex + 1;
 	    select(Math.min(currentIndex, elements.size() - 1));
 	    highlight(sortedIndex);
 	} else {
-	    // Moving procedure: move, then look at current plus next candidate
 	    move(currentIndex, currentIndex - 1);
 	    currentIndex--;
 	    if (currentIndex == sortedIndex)

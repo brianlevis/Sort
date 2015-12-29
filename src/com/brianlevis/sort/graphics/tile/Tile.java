@@ -25,46 +25,47 @@ public class Tile {
 
     // **********************************
 
-    public static int[] sample = { 6, 10, 9, 4, 3, 8, 7, 2, 1, 3, 9, 4, 3, 8, 7 };
+    // public static int[] sample = { 6, 10, 9, 4, 3, 8, 7, 2, 1, 3, 9, 4, 3, 8,
+    // 7 };
 
     // **********************************
 
     public Tile(int height, int width, int xPosition, int yPosition, String name) {
-	tiles.add(this);
-	this.height = height;
-	this.width = width;
-	this.name = name;
-	this.xPosition = xPosition;
-	this.yPosition = yPosition;
+        tiles.add(this);
+        this.height = height;
+        this.width = width;
+        this.name = name;
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
 
-	switch (name) {
-	case "insertion":
-	    algorithm = new Insertion();
-	    break;
-	case "selection":
-	    algorithm = new Selection();
-	}
-	
-	int max = 0;
-	for (Element element : algorithm.elements)
-	    max = Math.max(max, element.value);
-	
-	heightMultiplier = (height - 5) / max;
-	barWidth = (width - 10) / algorithm.elements.size() - 1;
-	
-	pixels = new int[height * width];
+        switch (name) {
+        case "insertion":
+            algorithm = new Insertion();
+            break;
+        case "selection":
+            algorithm = new Selection();
+        }
+
+        int max = 0;
+        for (Element element : algorithm.elements)
+            max = Math.max(max, element.value);
+
+        heightMultiplier = (height - 5) / max;
+        barWidth = (width - 10) / algorithm.elements.size() - 1;
+
+        pixels = new int[height * width];
 
     }
 
     public static void update() {
-	for (Tile tile : tiles) {
-	    tile.algorithm.next();
-	}
+        for (Tile tile : tiles) {
+            tile.algorithm.next();
+        }
     }
 
     public static void render(Screen screen) {
-	for (Tile tile : tiles)
-	    screen.renderTile(tile, tile.barWidth, tile.heightMultiplier);
+        for (Tile tile : tiles)
+            screen.renderTile(tile, tile.barWidth, tile.heightMultiplier);
     }
 
 }
