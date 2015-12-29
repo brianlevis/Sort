@@ -10,7 +10,7 @@ public class Element {
 	public Element(int value) {
 		this.value = value;
 	}
-
+	
 	public void setColor(int color) {
 		//this.value = value;
 		//this.position = position;

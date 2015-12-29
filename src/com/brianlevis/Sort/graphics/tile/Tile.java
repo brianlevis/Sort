@@ -5,12 +5,14 @@ import java.util.List;
 
 import com.brianlevis.sort.algorithms.Algorithm;
 import com.brianlevis.sort.algorithms.Insertion;
+import com.brianlevis.sort.algorithms.Merge;
 import com.brianlevis.sort.algorithms.Selection;
 import com.brianlevis.sort.graphics.Screen;
 
 public class Tile {
 
     public static List<Tile> tiles = new ArrayList<Tile>();
+    public static boolean whoop;
 
     public int[] pixels;
 
@@ -19,9 +21,8 @@ public class Tile {
     public String name;
     public int height, width, xPosition, yPosition;
     private int barWidth, heightMultiplier;
-    // private int bar = 10;
 
-    public boolean selfDestruct = false;
+    public boolean selected = false;
 
     // **********************************
 
@@ -44,6 +45,9 @@ public class Tile {
             break;
         case "selection":
             algorithm = new Selection();
+            break;
+        case "merge":
+            algorithm = new Merge();
         }
 
         int max = 0;
@@ -54,11 +58,12 @@ public class Tile {
         barWidth = (width - 10) / algorithm.elements.size() - 1;
 
         pixels = new int[height * width];
-
     }
-
+    
     public static void update() {
+        whoop = false;
         for (Tile tile : tiles) {
+            whoop = whoop || !tile.algorithm.sorted;
             tile.algorithm.next();
         }
     }

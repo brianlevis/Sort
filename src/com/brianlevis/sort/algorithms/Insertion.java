@@ -6,7 +6,7 @@ public class Insertion extends Algorithm {
     private int currentIndex = 1;
 
     public Insertion() {
-	super("Insertion Sort");
+	super();
 	highlight(0);
 	select(1);
     }

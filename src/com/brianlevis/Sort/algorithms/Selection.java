@@ -8,7 +8,7 @@ public class Selection extends Algorithm {
     private int nextIndex = 0;
 
     public Selection() {
-	super("Selection Sort");
+	super();
 	select(0);
     }
 

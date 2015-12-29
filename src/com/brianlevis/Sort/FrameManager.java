@@ -3,9 +3,9 @@ package com.brianlevis.sort;
 import java.util.Random;
 
 import com.brianlevis.sort.graphics.Screen;
-import com.brianlevis.sort.graphics.Whooper;
 import com.brianlevis.sort.graphics.tile.Tile;
 import com.brianlevis.sort.input.Mouse;
+import com.brianlevis.sort.sound.Whooper;
 
 public class FrameManager {
 
@@ -16,12 +16,11 @@ public class FrameManager {
     public static final int xOffset = 50;
     public static final int yOffset = 220;
 
-    private final String[] names = { "insertion", "selection", "selection", "selection", "selection", "selection",
-            "selection", "selection" };
+    private final String[] names = { "insertion", "selection", "merge" };
     private Whooper whooper;
 
     public FrameManager(Mouse mouse) {
-        whooper = new Whooper(mouse);
+        whooper = new Whooper();
         generateTiles();
     }
 
